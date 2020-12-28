@@ -391,6 +391,9 @@
   <script>
     /* Game Script*/
     function playGame() {
+      const audio = new Audio('./media/audio.mp3').play();
+      // audio.onended = function () { alert("end") }
+
       var playerBoy = document.querySelector("#player");
       var imgEle = document.querySelector("#player img");
 
