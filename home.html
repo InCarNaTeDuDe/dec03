@@ -73,7 +73,7 @@
           var n = new Notification("Greetings", {
             body: "Many More Happy Returns of the day,Bhavya..\nEnjoy your day\n",
             icon: './images/notif-badge.png',
-            badge: './imgs/2.png',
+            badge: './images/notif-badge.png',
             vibrate: [50, 100, 150]
           });
         }
@@ -85,8 +85,8 @@
             navigator.serviceWorker.ready.then(function (registration) {
               registration.showNotification("Wishes from Bharath", {
                 body: "Many More Happy / chocolates Returns of the day,Bhavya..\nEnjoy your day\n",
-                icon: './imgs/bn.jpg',
-                badge: './imgs/2.png',
+                icon: './images/notif-badge.png',
+                badge: './images/notif-badge.png',
                 timestamp: Date.parse(new Date()),
                 // sound:'....mp3'
                 actions: [
