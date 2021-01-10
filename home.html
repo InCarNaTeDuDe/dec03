@@ -50,6 +50,53 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/script.js" async defer></script>
+  <script>
+    const ua = navigator.userAgent;
+    if ('Notification' in window) {
+      console.info('Notifications are supported!');
+      Notification.requestPermission(permission => {
+        if (permission == 'denied') {
+          alert(`Notifications are ${permission},Allow them by clicking on Site Settings/Green Padlock`);
+        }
+      });
+      /*** Desktop Notifications ***/
+      if (ua.indexOf('Firefox') > -1) {
+        if (Notification.permission == 'granted' && location.protocol == 'https:') {
+          var n = new Notification("Greetings", {
+            body: "Many More Happy Returns of the day,Bhavya..\nEnjoy your day\n",
+            icon: './images/notif-badge.png',
+            badge: './imgs/2.png',
+            vibrate: [50, 100, 150]
+          });
+        }
+      } else { /*** End ***/
+        /*** Notifications polyfill for Android/iOS/Web ***/
+        navigator.serviceWorker.register('sw.js');
+        Notification.requestPermission(function (result) {
+          if (result === 'granted') {
+            navigator.serviceWorker.ready.then(function (registration) {
+              registration.showNotification("Wishes from Bharath", {
+                body: "Many More Happy / chocolates Returns of the day,Bhavya..\nEnjoy your day\n",
+                icon: './imgs/bn.jpg',
+                badge: './imgs/2.png',
+                timestamp: Date.parse(new Date()),
+                // sound:'....mp3'
+                actions: [
+                  { action: 'cake', title: 'Cake', icon: '/imgs/ice.png' },
+                  { action: 'icecream', title: 'Ice Cream', icon: './ice.jpeg' }
+                ],
+                vibrate: [50, 100, 150]
+              });
+            });
+          }
+        });
+      }
+      /*** End ***/
+    } else {
+      console.error('Update your browser to receive Notifications');
+    }
+
+  </script>
 </body>
 
 </html>
