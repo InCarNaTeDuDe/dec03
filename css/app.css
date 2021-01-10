@@ -336,3 +336,9 @@ span {
     width: 100%;
   }
 }
+.space-evenly {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
