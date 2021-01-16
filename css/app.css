@@ -146,20 +146,20 @@ span {
   border-radius: 50%;
   box-shadow: 8px 10px 5px -2px aliceblue;
   /*transform: rotateY(-180deg);*/
-  position: relative;
-  top: 80px;
-  left: 30px;
+  position: absolute;
+  top: 70px;
+  left: 125px;
   z-index: 1;
 }
 
 #game hr.rope {
   opacity: 0;
   margin: 0;
-  height: 250px;
+  height: 265px;
   position: relative;
   left: 134px;
   transition: opacity 1s ease-in;
-  top: 125px;
+  top: 115px;
 }
 
 #game input[type="checkbox"] {
@@ -252,8 +252,8 @@ span {
 }
 
 #game > span:nth-child(7) {
-  top: 68px;
-  left: 75px;
+  top: 60px;
+  left: 125px;
   position: relative;
   opacity: 0;
   /*-webkit-animation: stars 2s infinite linear, 3s linear;*/
@@ -265,6 +265,7 @@ span {
 
 #game .bday_wish {
   line-height: 2.7rem;
+  position: absolute;
   right: 0;
   top: 200px;
   transition: opacity 2s ease-in;
