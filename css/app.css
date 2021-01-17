@@ -343,3 +343,12 @@ span {
   align-items: center;
   justify-content: space-evenly;
 }
+
+@media (max-width: 600px) {
+  .space-evenly {
+    flex-direction: column;
+  }
+  #game{
+    margin-top: 20px;
+  }
+}
