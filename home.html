@@ -13,8 +13,7 @@
   <title>Birthday Special for Bhavya k</title>
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
   <meta property="og:title" content="Birthday Special &#127874; for Bhavya Kol****ra" />
-  <meta property="og:description"
-    content="&#127775; Bhavya K &#128161; Birthday Glimpse! &#128230; " />
+  <meta property="og:description" content="&#127775; Bhavya K &#128161; Birthday Glimpse! &#128230; " />
   <meta property="og:image" content="https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/wish.png" />
 
   <link rel="prefetch" href="https://dec3.herokuapp.com/images/2.png" />
@@ -32,10 +31,30 @@
     Thank you..!!
   </h2>
   <div class="space-evenly">
-    <div class="face">
+    <!-- <div class="face">
       <div class="eyes">
         <div class="eye"></div>
         <div class="eye"></div>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <div class="box">
+        <label></label>
+        <div class="content">
+          <h2 class="main-title">
+            My Promises
+          </h2>
+          <p>No one can love you more than your family,<br />If Someone does,Either that person is from your family, or
+            has become a part of it! <i> &#x1F38E;</i></p>
+          <p>
+            People dont need advise,sometimes they'all need is a hand <i>&#x270B;</i> to hold <i>&#x270A;</i> & an ear
+            to listen & a heart to
+            understand <i> &#x1F917;</i>,
+            I have them all ready 4u!
+          </p>
+          <p>If Im thinking of u and ur family, Believe me I Want to become a part of it!</p>
+        </div>
       </div>
     </div>
 
@@ -109,6 +128,15 @@
     } else {
       console.error('Update your browser to receive Notifications');
     }
+
+    self.addEventListener('notificationclick', function (event) {
+      console.log("EventData:-", event.notification)
+      event.notification.close();
+
+
+      clients.openWindow("https://dec03.herokuapp.com/?bhavya=true");
+
+    }, false);
 
   </script>
 </body>
