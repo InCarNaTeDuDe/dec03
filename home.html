@@ -129,7 +129,7 @@
       console.error('Update your browser to receive Notifications');
     }
 
-    self.addEventListener('notificationclick', function (event) {
+    window.addEventListener('notificationclick', function (event) {
       console.log("EventData:-", event.notification)
       event.notification.close();
 
