@@ -1,5 +1,8 @@
 /* Game Script*/
 function playGame() {
+  // document.querySelector("input[type='checkbox']").disabled=true;
+  const inputbox = document.querySelector("input[type='checkbox']");
+  inputbox.disabled = true;
   const audio = new Audio("./media/audio.mp3").play();
   // audio.onended = function () { alert("end") }
 
@@ -15,6 +18,15 @@ function playGame() {
   function frame() {
     if (pos > GAME_AREA_WIDTH) {
       clearInterval(id);
+      imgEle.src = "./images/happyboy.png";
+      imgEle.style.height = "90px";
+      imgEle.style.filter = "inherit";
+      imgEle.style.top = "-30px";
+      imgEle.style.left = "-35px";
+      imgEle.style.position = "relative";
+      imgEle.style.transform = "skewY(10deg)";
+      imgEle.classList.add("swirl");
+      inputbox.disabled = false;
     } else if (pos < GAME_AREA_WIDTH) {
       if (!playerBoy.classList.value.includes("hang")) {
         // If boy is hanging the moon, dont increment pos

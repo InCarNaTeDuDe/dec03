@@ -332,6 +332,22 @@ span {
   }
 }
 
+.swirl {
+  animation: swirl 1s ease-in-out infinite;
+  -webkit-animation: swirl 1s ease-in-out infinite;
+  -moz-animation: swirl 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes swirl {
+  0% {
+    transform: skewY(10deg);
+  }
+
+  100% {
+    transform: perspective(10px);
+  }
+}
+
 @media (max-width: 449px) {
   #game {
     width: 100%;
