@@ -20,6 +20,7 @@
   <link rel="prefetch" href="https://dec3.herokuapp.com/images/3.png" />
   <link rel="prefetch" href="https://dec3.herokuapp.com/images/4.png" />
   <link rel="prefetch" href="https://dec3.herokuapp.com/images/5.png" />
+  <link rel="prefetch" href="https://dec3.herokuapp.com/images/happyboy.png" />
   <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -108,8 +109,8 @@
         Notification.requestPermission(function (result) {
           if (result === 'granted') {
             navigator.serviceWorker.ready.then(function (registration) {
-              registration.showNotification("Wishes from Bharath", {
-                body: "Many More Happy / chocolates Returns of the day,Bhavya..\nEnjoy your day\n",
+              registration.showNotification("Greetings, Bhavya K", {
+                body: "Many More Happy Returns of the day,Bhavya..\nEnjoy your day\n",
                 icon: './images/notif-badge.png',
                 badge: './images/notif-badge.png',
                 timestamp: Date.parse(new Date()),
