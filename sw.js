@@ -1,6 +1,7 @@
 var cacheName = "cache-v1";
 
 var resourcesToCache = [
+  "/",
   "./index.php",
   "./home.html",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/1.png",
