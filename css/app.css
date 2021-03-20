@@ -5,7 +5,8 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background: #000;
   height: 100%;
 
@@ -375,7 +376,8 @@ label.bday_wish > h5.name {
   20% {
     transform: translateY(20px);
   }
-  40%,100% {
+  40%,
+  100% {
     transform: translateY(0px);
   }
 }
@@ -466,6 +468,10 @@ label.bday_wish > h5.name {
 }
 
 @media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
   .space-evenly {
     flex-direction: column;
   }

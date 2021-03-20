@@ -1,9 +1,25 @@
+self.addEventListener(
+  "notificationclick",
+  function (event) {
+    event.notification.close();
+
+    if (event.action === "be") {
+      alert("Thank You so much! 🤗");
+    } else if (event.action === "happy") {
+      alert("Thank You so much! 🤗");
+    }
+  },
+  false
+);
+
 /* Game Script*/
 function playGame() {
   // document.querySelector("input[type='checkbox']").disabled=true;
   const inputbox = document.querySelector("input[type='checkbox']");
   inputbox.disabled = true;
-  const audio = new Audio("./media/audio.mp3").play();
+  const audio = new Audio(
+    "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp3"
+  ).play();
   // audio.onended = function () { alert("end") }
 
   var playerBoy = document.querySelector("#player");
@@ -18,7 +34,8 @@ function playGame() {
   function frame() {
     if (pos > GAME_AREA_WIDTH) {
       clearInterval(id);
-      imgEle.src = "./images/happyboy.png";
+      imgEle.src =
+        "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/happyboy.png";
       imgEle.style.height = "90px";
       imgEle.style.filter = "inherit";
       imgEle.style.top = "-30px";
@@ -27,6 +44,10 @@ function playGame() {
       imgEle.style.transform = "skewY(10deg)";
       imgEle.classList.add("swirl");
       inputbox.disabled = false;
+      doc.querySelector(".container").scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
     } else if (pos < GAME_AREA_WIDTH) {
       if (!playerBoy.classList.value.includes("hang")) {
         // If boy is hanging the moon, dont increment pos
@@ -36,7 +57,7 @@ function playGame() {
       frameInd += 1;
       playerBoy.style.left = pos + "px";
       if (frameInd <= 5) {
-        imgEle.src = `./images/${frameInd}.png`;
+        imgEle.src = `https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/${frameInd}.png`;
       } else {
         frameInd = 0;
       }
