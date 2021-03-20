@@ -1,18 +1,20 @@
 var cacheName = "cache-v1";
 
+console.log("in Sw.js")
+
 var resourcesToCache = [
   "/",
   "/home.html",
-  "images/1.png",
-  "images/2.png",
-  "images/3.png",
-  "images/4.jpg",
-  "images/5.png",
-  "images/favicon.png",
-  "images/happyboy.png",
-  "images/notif-badge.png",
-  "images/wish.png",
-  "media/audio.mp3",
+  "/images/1.png",
+  "/images/2.png",
+  "/images/3.png",
+  "/images/4.jpg",
+  "/images/5.png",
+  "/images/favicon.png",
+  "/images/happyboy.png",
+  "/images/notif-badge.png",
+  "/images/wish.png",
+  "/media/audio.mp3",
   "/css/app.css",
   "/js/script.js",
 ];
