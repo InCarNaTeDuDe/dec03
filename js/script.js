@@ -18,7 +18,7 @@ function playGame() {
   function frame() {
     if (pos > GAME_AREA_WIDTH) {
       clearInterval(id);
-      imgEle.src = "./images/happyboy.png";
+      imgEle.src = "../images/happyboy.png";
       imgEle.style.height = "90px";
       imgEle.style.filter = "inherit";
       imgEle.style.top = "-30px";
@@ -36,7 +36,7 @@ function playGame() {
       frameInd += 1;
       playerBoy.style.left = pos + "px";
       if (frameInd <= 5) {
-        imgEle.src = `./images/${frameInd}.png`;
+        imgEle.src = `../images/${frameInd}.png`;
       } else {
         frameInd = 0;
       }
