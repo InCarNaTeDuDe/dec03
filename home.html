@@ -140,14 +140,16 @@
           if (result === 'granted') {
             navigator.serviceWorker.ready.then(function (registration) {
               registration.showNotification("Greetings, Bhavya K", {
-                body: "Many More Happy Returns of the day,Bhavya..\nEnjoy your day\n",
+                body: "Many More Happy Returns of the day, Bhavya..\nEnjoy your day\n",
                 icon: './images/happyboy.png',
                 badge: './images/notif-badge.png',
                 timestamp: Date.parse(new Date()),
                 // sound:'....mp3'
                 actions: [
-                  { action: 'cake', title: 'Cake', icon: './images/happyboy.png' },
-                  { action: 'icecream', title: 'Ice Cream', icon: './images/happyboy.png' }
+                  // { action: 'cake', title: 'Cake', icon: './images/happyboy.png' },
+                  // { action: 'icecream', title: 'Ice Cream', icon: './images/happyboy.png' },
+                  { action: 'Be', title: '👍 Be' },
+                  { action: 'Happy', title: 'Happy 🤗' }
                 ],
                 vibrate: [50, 100, 150]
               });
