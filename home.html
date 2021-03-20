@@ -114,7 +114,19 @@
         }
       } else { /*** End ***/
         /*** Notifications polyfill for Android/iOS/Web ***/
-        navigator.serviceWorker.register('sw.js');
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker
+              .register("./sw.js")
+              .then((reg) => {
+                console.log("Reg", reg);
+              })
+              .catch((e) => console.error("Err:", e));
+          });
+        } else {
+          console.error("Sw not Supported!");
+        }
+
         Notification.requestPermission(function (result) {
           if (result === 'granted') {
             navigator.serviceWorker.ready.then(function (registration) {
