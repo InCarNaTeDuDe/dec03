@@ -18,7 +18,7 @@ function playGame() {
   function frame() {
     if (pos > GAME_AREA_WIDTH) {
       clearInterval(id);
-      imgEle.src = "../images/happyboy.png";
+      imgEle.src = "https://github.com/InCarNaTeDuDe/dec03/blob/master/happyboy.png?raw=true";
       imgEle.style.height = "90px";
       imgEle.style.filter = "inherit";
       imgEle.style.top = "-30px";
@@ -36,7 +36,7 @@ function playGame() {
       frameInd += 1;
       playerBoy.style.left = pos + "px";
       if (frameInd <= 5) {
-        imgEle.src = `../images/${frameInd}.png`;
+        imgEle.src = `https://github.com/InCarNaTeDuDe/dec03/blob/master/${frameInd}.png?raw=true`;
       } else {
         frameInd = 0;
       }
