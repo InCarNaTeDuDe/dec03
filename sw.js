@@ -13,7 +13,7 @@ var resourcesToCache = [
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/favicon.png",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/notif-badge.png",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/wish.png",
-  "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp33",
+  "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp3",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/css/app.css",
   "https://code.jquery.com/jquery-3.4.1.min.js",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/js/script.js",
