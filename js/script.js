@@ -44,6 +44,10 @@ function playGame() {
       imgEle.style.transform = "skewY(10deg)";
       imgEle.classList.add("swirl");
       inputbox.disabled = false;
+      doc.querySelector(".container").scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
     } else if (pos < GAME_AREA_WIDTH) {
       if (!playerBoy.classList.value.includes("hang")) {
         // If boy is hanging the moon, dont increment pos
