@@ -14,9 +14,9 @@ var resourcesToCache = [
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/notif-badge.png",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/wish.png",
   "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp33",
-  "./css/app.css",
+  "css/app.css",
   "https://code.jquery.com/jquery-3.4.1.min.js",
-  "./js/script.js",
+  "js/script.js",
 ];
 
 self.addEventListener("install", function (event) {
