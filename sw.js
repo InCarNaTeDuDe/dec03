@@ -1,21 +1,21 @@
 var cacheName = "cache-v1";
 
 var resourcesToCache = [
-  "/",
-  "/home.html",
-  "/images/1.png",
-  "/images/2.png",
-  "/images/3.png",
-  "/images/4.jpg",
-  "/images/5.png",
-  "/images/favicon.png",
-  "/images/happyboy.png",
-  "/images/notif-badge.png",
-  "/images/wish.png",
-  "/media/audio.mp3",
-  "/css/app.css",
+  "./index.php",
+  "./home.html",
+  "./images/1.png",
+  "./images/2.png",
+  "./images/3.png",
+  "./images/4.jpg",
+  "./images/5.png",
+  "./images/favicon.png",
+  "./images/happyboy.png",
+  "./images/notif-badge.png",
+  "./images/wish.png",
+  "./media/audio.mp3",
+  "./css/app.css",
   "https://code.jquery.com/jquery-3.4.1.min.js",
-  "/js/script.js",
+  "./js/script.js",
 ];
 
 self.addEventListener("install", function (event) {
