@@ -44,3 +44,15 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+self.addEventListener("notificationclick", function (event) {
+  const notification = event.notification;
+  const action = event.action;
+
+  if (action === "be") {
+    notification.close();
+    clients.openWindow("https://dec03.herokuapp.com/")
+  } else {
+    notification.close();
+  }
+});

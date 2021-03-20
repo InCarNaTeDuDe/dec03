@@ -1,25 +1,9 @@
-self.addEventListener(
-  "notificationclick",
-  function (event) {
-    event.notification.close();
-
-    if (event.action === "be") {
-      alert("Thank You so much! 🤗");
-    } else if (event.action === "happy") {
-      alert("Thank You so much! 🤗");
-    }
-  },
-  false
-);
-
 /* Game Script*/
 function playGame() {
   // document.querySelector("input[type='checkbox']").disabled=true;
   const inputbox = document.querySelector("input[type='checkbox']");
   inputbox.disabled = true;
-  const audio = new Audio(
-    "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp3"
-  ).play();
+  new Audio("../media/primary.mp3").play();
   // audio.onended = function () { alert("end") }
 
   var playerBoy = document.querySelector("#player");
@@ -43,10 +27,11 @@ function playGame() {
       imgEle.style.position = "relative";
       imgEle.style.transform = "skewY(10deg)";
       imgEle.classList.add("swirl");
-      inputbox.disabled = false;
+      // inputbox.disabled = false;
       doc.querySelector(".container").scrollIntoView({
-        block: "start",
         behavior: "smooth",
+        block: "start",
+        inline: "nearest",
       });
     } else if (pos < GAME_AREA_WIDTH) {
       if (!playerBoy.classList.value.includes("hang")) {

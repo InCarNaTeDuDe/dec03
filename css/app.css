@@ -100,6 +100,11 @@ body {
   margin-bottom: 12px;
   border-bottom: 2px solid white;
   padding: 12px 0;
+  transition: all .5s;
+}
+
+.container .box .content p:hover{
+  transform: translateX(10px);
 }
 
 section {
@@ -252,6 +257,8 @@ span {
 #game input[type="checkbox"] {
   transform: scale(2) translate(5px, 3px);
   cursor: pointer;
+  position: absolute;
+  left: 75px;
 }
 
 #game > span {

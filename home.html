@@ -138,7 +138,7 @@
           if (result === 'granted') {
             navigator.serviceWorker.ready.then(function (registration) {
               registration.showNotification("Greetings, Bhavya K", {
-                body: "Many More Happy Returns of the day, Bhavya..\nEnjoy your day\n",
+                body: "Sending you smiles 😄 & laughs to make your special day brighter,  Bhavya 🎂.\nEnjoy your day\n",
                 icon: './images/gift.png',
                 badge: './images/gift.png',
                 timestamp: Date.now(),
@@ -159,15 +159,6 @@
     } else {
       console.error('Update your browser to receive Notifications');
     }
-
-    window.addEventListener('notificationclick', function (event) {
-      console.log("EventData:-", event.notification)
-      event.notification.close();
-
-
-      clients.openWindow("https://dec03.herokuapp.com/?bhavya=true");
-
-    }, false);
 
   </script>
 </body>
