@@ -37,7 +37,7 @@ function playGame() {
       frameInd += 1;
       playerBoy.style.left = pos + "px";
       if (frameInd <= 5) {
-        imgEle.src = `https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/images/${frameInd}.png`;
+        imgEle.src = `../images/${frameInd}.png`;
       } else {
         frameInd = 0;
       }
