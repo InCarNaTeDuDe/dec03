@@ -1,9 +1,25 @@
+self.addEventListener(
+  "notificationclick",
+  function (event) {
+    event.notification.close();
+
+    if (event.action === "be") {
+      alert("Thank You so much! 🤗");
+    } else if (event.action === "happy") {
+      alert("Thank You so much! 🤗");
+    }
+  },
+  false
+);
+
 /* Game Script*/
 function playGame() {
   // document.querySelector("input[type='checkbox']").disabled=true;
   const inputbox = document.querySelector("input[type='checkbox']");
   inputbox.disabled = true;
-  const audio = new Audio("https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp3").play();
+  const audio = new Audio(
+    "https://raw.githubusercontent.com/InCarNaTeDuDe/dec03/master/media/audio.mp3"
+  ).play();
   // audio.onended = function () { alert("end") }
 
   var playerBoy = document.querySelector("#player");
