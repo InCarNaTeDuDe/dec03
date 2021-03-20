@@ -14,6 +14,7 @@ var resourcesToCache = [
   "/images/wish.png",
   "/media/audio.mp3",
   "/css/app.css",
+  "https://code.jquery.com/jquery-3.4.1.min.js",
   "/js/script.js",
 ];
 
