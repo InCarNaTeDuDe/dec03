@@ -1,3 +1,16 @@
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((reg) => {
+        console.log("Reg", reg);
+      })
+      .catch((e) => console.error("Err:", e));
+  });
+} else {
+  console.error("Sw not Supported!");
+}
+
 /* Game Script*/
 function playGame() {
   // document.querySelector("input[type='checkbox']").disabled=true;
