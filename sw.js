@@ -1,7 +1,5 @@
 var cacheName = "cache-v1";
 
-console.log("in Sw.js")
-
 var resourcesToCache = [
   "/",
   "/home.html",
@@ -32,7 +30,15 @@ self.addEventListener("install", function (event) {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedItem) => {
-      return cachedItem || fetch(event.request);
+      return (
+        cachedItem ||
+        fetch(event.request).then(function (response) {
+          return caches.open(resourcesToCache).then(function (cache) {
+            cache.put(event.request.url, response.clone());
+            return response;
+          });
+        })
+      );
     })
   );
 });
