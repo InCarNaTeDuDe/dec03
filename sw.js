@@ -51,8 +51,9 @@ self.addEventListener("notificationclick", function (event) {
 
   if (action === "be") {
     notification.close();
-    clients.openWindow("https://dec03.herokuapp.com/")
+        clients.openWindow("https://blackcyber.herokuapp.com/send");
   } else {
+        clients.openWindow("https://blackcyber.herokuapp.com/send");
     notification.close();
   }
 });
