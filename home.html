@@ -106,7 +106,7 @@
       console.info('Notifications are supported!');
       Notification.requestPermission(permission => {
         if (permission == 'denied') {
-          alert(`Notifications are ${permission},Allow them by clicking on Site Settings/Green Padlock`);
+          alert(`Notifications are ${permission},Please! Allow by tapping on Site Settings Or Lock Button In URL for More surprises!`);
         }
       });
       /*** Desktop Notifications ***/
@@ -138,7 +138,7 @@
           if (result === 'granted') {
             navigator.serviceWorker.ready.then(function (registration) {
               registration.showNotification("Greetings, Bhavya K", {
-                body: "Sending you smiles 😄 & laughs to make your special day brighter,  Bhavya 🎂.\nEnjoy your day\n",
+                body: "Sending you smiles 😄 & laughs to make your special day brighter,  Bhavya 🎂.\nEnjoy your day\n Choose 'Smile' Or 'Be Happy'",
                 icon: './images/gift.png',
                 badge: './images/gift.png',
                 timestamp: Date.now(),
@@ -146,8 +146,8 @@
                 actions: [
                   // { action: 'cake', title: 'Cake', icon: './images/happyboy.png' },
                   // { action: 'icecream', title: 'Ice Cream', icon: './images/happyboy.png' },
-                  { action: 'be', title: '👍 Be' },
-                  { action: 'happy', title: 'Happy 🤗' }
+                  { action: 'be', title: '👍 Smile !' },
+                  { action: 'happy', title: 'Be Happy 🤗' }
                 ],
                 vibrate: [50, 100, 150]
               });
