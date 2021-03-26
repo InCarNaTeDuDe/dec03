@@ -1,6 +1,6 @@
-if(document.readyState === "complete"){
+setTimeout(function(){
  document.querySelector("input[type='checkbox']").click()
-}
+});
 
 /* Game Script*/
 function playGame() {
