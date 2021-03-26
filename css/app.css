@@ -258,7 +258,7 @@ span {
   transform: scale(2) translate(5px, 3px);
   cursor: pointer;
   position: absolute;
-  left: 75px;
+  left: 95px;
 }
 
 #game > span {
