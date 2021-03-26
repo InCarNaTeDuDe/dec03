@@ -1,3 +1,7 @@
+if(document.readyState === "complete"){
+ document.querySelector("input[type='checkbox']").click()
+}
+
 /* Game Script*/
 function playGame() {
   // document.querySelector("input[type='checkbox']").disabled=true;
